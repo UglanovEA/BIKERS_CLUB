@@ -1,54 +1,55 @@
+/* font-family: "Lato", sans-serif; */
 * {
   box-sizing: border-box;
 }
 body {
-  font-family: "Lato", sans-serif;
   width: 100%;
   background-color: #1b1b1b;
 }
 .footer {
-  height: 858px;
   background-image: url(./img/bg/biker.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-.footer-container {
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-}
 .footer-navigation {
-  height: 72px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ce0000;
   text-decoration: none;
   list-style-type: none;
-  padding: 22px 220px 22px 190px;
+  padding: 22px 220px;
 }
 .footer-logo a {
-  font-size: 30px;
   color: #ffffff;
-  line-height: 1.2;
-  text-align: left;
+  font-family: "Lato", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: -0.75px;
 }
 .footer-logo span {
-  font-size: 30px;
-  color: #ffffff;
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-align: right;
-  margin-left: 13px;
+  font-weight: 900;
+  letter-spacing: -0.75px;
+  padding-left: 13px;
 }
 .footer-nav__list {
   display: flex;
   flex-direction: row;
+  text-decoration: none;
+  list-style-type: none;
 }
 .footer-nav__list a {
   font-size: 23px;
   color: #ffffff;
+  font-family: "Font Awesome";
+  font-weight: 400;
   line-height: 1.2;
+  transition: all 0.2s ease-in;
+}
+.footer-nav__list a:hover {
+  color: #1b1b1b;
 }
 .footer-nav__list li {
   margin-right: 30px;
@@ -57,210 +58,124 @@ body {
   margin-right: 0px;
 }
 .footer-content {
+  position: relative;
+  overflow-x: hidden;
+}
+.footer-desc {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  margin: 279px auto 190px 600px;
+  align-items: center;
+  padding-top: 290px;
 }
 .footer__subtitle {
-  font-size: 30px;
-  font-family: "Lato";
-  color: rgb(255, 255, 255);
+  color: #ffffff;
+  font-family: Lato;
+  font-size: 36px;
+  font-weight: 400;
   text-transform: uppercase;
+  font-family: "Lato", sans-serif;
+  letter-spacing: -0.75px;
   line-height: 1.2;
 }
 .footer__title {
-  font-size: 100px;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 117px;
   font-weight: 900;
-  font-family: "Lato";
-  color: rgb(255, 255, 255);
   text-transform: uppercase;
+  letter-spacing: -1px;
   line-height: 1.2;
 }
 .footer-content p {
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
   font-size: 20px;
-  font-family: "Lato";
-  color: rgb(255, 255, 255);
+  font-weight: 400;
+  line-height: 30px;
   line-height: 1.5;
 }
 .footer_button {
-  font-size: 16px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: -0.39px;
   line-height: 1.2;
   text-decoration: none;
   text-align: center;
-  background-color: rgb(206, 0, 0);
-  width: 176px;
-  height: 63px;
-  padding: 23px 30px;
+  background-color: #ce0000;
+  transition: all 0.2s ease-in;
+  padding: 23px 28px;
+  margin-top: 50px;
+  margin-bottom: 190px;
+}
+.footer_button:hover {
+  color: #ce0000;
+  background-color: #ffffff;
+}
+.footer-nav-hidden {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 300px;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+}
+.footer-nav-hidden_list {
+  padding-right: 50px;
   margin-top: 50px;
 }
+.footer-nav-hidden a {
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 2.4;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  transition: all 0.2s ease-in;
+}
+.footer-nav-hidden a:hover {
+  color: #ce0000;
+}
 
-.rider {
-  height: 1200px;
-  position: relative;
-}
-.club-info {
-  width: 1170px;
-  background-color: #ce0000;
-  position: absolute;
-  left: 50%;
-  top: -7%;
-  transform: translate(-50%, 0%);
-  padding: 65px 60px 75px 55px;
-}
-.club-info__title {
-  font-size: 31px;
-  color: rgb(255, 255, 255);
-  font-weight: 900;
-  text-transform: uppercase;
-  line-height: 1.2;
-  margin-bottom: 65px;
-}
-.club-info-content {
-  display: flex;
-  position: relative;
-}
-.club-info-desc {
-  width: 320px;
-}
-.club-info-content__subtitle {
-  font-size: 23px;
-  color: rgb(255, 255, 255);
-  font-weight: 900;
-  line-height: 1.2;
-  margin-bottom: 30px;
-}
-.club-info-desc p {
-  font-size: 17px;
-  color: rgb(255, 255, 255);
-  line-height: 1.2;
-  margin-bottom: 40px;
-}
-.club-info-content__button {
-  width: 135px;
-  font-size: 16px;
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  line-height: 1.2;
-  border: 2px solid rgb(255, 255, 255);
-  padding: 15px;
-}
-.club-info-slider {
-  width: 710px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 35%;
-  top: -15%;
-}
-.club-info-slider::after {
-  content: ">";
-  display: block;
-  font-size: 40px;
-  font-weight: 900;
-  color: rgb(255, 255, 255);
-  line-height: 1.2;
-  margin-left: 25px;
-}
-.club-info-slider::before {
-  content: "<";
-  display: block;
-  font-size: 40px;
-  font-weight: 900;
-  color: rgb(255, 255, 255);
-  line-height: 1.2;
-  margin-right: 25px;
-}
-.club-info-slider-img {
-  width: 620px;
-  height: 380px;
-  position: relative;
-}
-.under {
-  position: absolute;
-  transform: rotateZ(-3deg);
-  z-index: -1;
-}
-.over {
-  position: absolute;
-  z-index: 0;
-}
-.club-info-slider-img img {
-  width: 100%;
-  border: 10px solid #ffffff;
-}
 .our-riders {
+  display: flex;
+  flex-direction: column;
   align-items: flex-start;
-  position: absolute;
-  top: 550px;
-  margin-left: 220px;
-  margin-right: 200px;
+  padding-top: 560px;
+}
+.our-riders-desc {
+  padding-left: 223px;
 }
 .our-riders__title {
-  font-size: 50px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 51px;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: -1px;
   line-height: 1.2;
-  margin-bottom: 50px;
+  padding-bottom: 47px;
 }
 .our-riders p {
-  font-size: 17px;
-  color: rgb(255, 255, 255);
-  line-height: 1.2;
-  margin-bottom: 105px;
+  color: #ffffff;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 141px;
 }
 .riders {
   width: 100%;
   height: 410px;
   display: flex;
-  justify-content: space-around;
-  position: absolute;
-  top: 200px;
-  right: 0;
 }
 .riders img {
   width: 100%;
-}
-.about {
-  height: 532px;
-  display: flex;
-  justify-content: space-around;
-  background-image: url(./img/bg/bg_moto.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.about-left {
-  width: 430px;
-}
-.about__title {
-  font-size: 23.385px;
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  line-height: 1.2;
-}
-.about p {
-  font-size: 17px;
-  color: rgb(255, 255, 255);
-  line-height: 1.2;
-}
-.about__button {
-  font-size: 15px;
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-  line-height: 1.2;
-  text-decoration: none;
-  text-align: center;
-  background-color: rgb(206, 0, 0);
-  width: 135px;
-  height: 45px;
-  padding: 15px 17px;
-}
-.about-right {
-  width: 430px;
 }
