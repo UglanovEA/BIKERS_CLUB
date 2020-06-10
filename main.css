@@ -4,35 +4,49 @@
 }
 body {
   width: 100%;
+  overflow-x: hidden;
   background-color: #1b1b1b;
+  font-family: "Lato", sans-serif;
+  color: #ffffff;
+}
+.container {
+  width: 1172px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer {
-  background-image: url(./img/bg/biker.jpg);
+  background-image: url(./img/bg/bg_header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 .footer-navigation {
+  height: 72px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   background-color: #ce0000;
   text-decoration: none;
   list-style-type: none;
-  padding: 22px 220px;
 }
-.footer-logo a {
+.footer-logo {
   color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-size: 30px;
-  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: -0.75px;
+  transition: color 0.2s ease-in;
+}
+.footer-logo strong {
+  font-family: "Lato", sans-serif;
+  padding-left: 13px;
 }
 .footer-logo span {
-  font-weight: 900;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
   letter-spacing: -0.75px;
-  padding-left: 13px;
+}
+.footer-logo:hover {
+  color: #1b1b1b;
 }
 .footer-nav__list {
   display: flex;
@@ -43,75 +57,54 @@ body {
 .footer-nav__list a {
   font-size: 23px;
   color: #ffffff;
-  font-family: "Font Awesome";
-  font-weight: 400;
-  line-height: 1.2;
-  transition: all 0.2s ease-in;
+  transition: color 0.2s ease-in;
 }
 .footer-nav__list a:hover {
   color: #1b1b1b;
 }
-.footer-nav__list li {
+.footer-nav__list li:not(:last-child) {
   margin-right: 30px;
-}
-.footer-nav__list li:last-child {
-  margin-right: 0px;
 }
 .footer-content {
   position: relative;
-  overflow-x: hidden;
 }
 .footer-desc {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding-top: 290px;
+  align-items: flex-start;
+  padding-top: 300px;
+  padding-left: 400px;
 }
 .footer__subtitle {
-  color: #ffffff;
-  font-family: Lato;
   font-size: 36px;
-  font-weight: 400;
   text-transform: uppercase;
-  font-family: "Lato", sans-serif;
   letter-spacing: -0.75px;
-  line-height: 1.2;
 }
 .footer__title {
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-size: 117px;
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: -1px;
-  line-height: 1.2;
 }
 .footer-content p {
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-size: 20px;
-  font-weight: 400;
-  line-height: 30px;
-  line-height: 1.5;
+  margin-bottom: 50px;
 }
-.footer_button {
+.button {
+  display: inline-block;
   color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.39px;
-  line-height: 1.2;
   text-decoration: none;
-  text-align: center;
   background-color: #ce0000;
+  cursor: pointer;
   transition: all 0.2s ease-in;
-  padding: 23px 28px;
-  margin-top: 50px;
-  margin-bottom: 190px;
+  padding: 20px 25px;
 }
-.footer_button:hover {
+.button:hover {
   color: #ce0000;
   background-color: #ffffff;
 }
@@ -125,6 +118,7 @@ body {
   display: flex;
   flex-direction: column;
   text-align: end;
+  list-style-type: none;
 }
 .footer-nav-hidden_list {
   padding-right: 50px;
@@ -132,14 +126,13 @@ body {
 }
 .footer-nav-hidden a {
   color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-size: 20px;
   font-weight: 400;
   line-height: 2.4;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: -0.5px;
-  transition: all 0.2s ease-in;
+  transition: color 0.2s ease-in;
 }
 .footer-nav-hidden a:hover {
   color: #ce0000;
@@ -147,9 +140,12 @@ body {
 
 .rider {
   position: relative;
+  height: 1120px;
+  display: flex;
+  align-items: center;
 }
 .club-info-wrapper {
-  width: 1168px;
+  width: 1172px;
   height: 481px;
   background-color: #ce0000;
   position: absolute;
@@ -161,46 +157,34 @@ body {
   padding: 63px 53px 0px;
 }
 .club-info__title {
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
   padding-bottom: 63px;
 }
-.club-info-content {
-  position: relative;
-}
 .club-info-desc {
-  width: 275px;
+  width: 345px;
 }
-.club-info-content__subtitle {
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
+.club-info-desc__subtitle {
   font-size: 30px;
   font-weight: 700;
   padding-bottom: 30px;
 }
-.club-info-content p {
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
+.club-info-desc p {
   font-size: 17px;
-  font-weight: 400;
   padding-bottom: 40px;
 }
-.club-info-content__button {
+.button-border {
   display: inline-block;
   border: 2px solid #ffffff;
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-size: 17px;
-  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: -0.75px;
   cursor: pointer;
+  transition: all 0.2s ease-in;
   padding: 14px 16px;
 }
-.club-info-content__button:hover {
+.button-border:hover {
   color: #ce0000;
   background-color: #ffffff;
 }
@@ -211,14 +195,17 @@ body {
   align-items: center;
   position: absolute;
   right: 0;
-  top: 0;
+  bottom: -20px;
   z-index: 2;
 }
-.club-info-slider-arrow a {
+.arrow a {
   color: #ffffff;
   font-size: 33px;
-  font-weight: 400;
   text-decoration: none;
+  transition: color 0.2s ease-in;
+}
+.arrow a:hover {
+  color: #1b1b1b;
 }
 .club-info-slider-img {
   width: 570px;
@@ -229,6 +216,8 @@ body {
 .club-info-slider-img img {
   width: 100%;
   height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .club-info-slider-img::before {
   content: "";
@@ -242,59 +231,50 @@ body {
   z-index: -1;
   transform: rotateZ(-5deg);
 }
-.our-riders {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-top: 560px;
-}
-.our-riders-desc {
-  padding-left: 223px;
-}
+
 .our-riders__title {
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-size: 51px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -1px;
-  line-height: 1.2;
   padding-bottom: 47px;
 }
 .our-riders p {
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-size: 20px;
-  font-weight: 400;
-  padding-bottom: 141px;
 }
 .riders {
   width: 100%;
   height: 410px;
   display: flex;
+  position: absolute;
+  left: 0;
+  bottom: -38px;
 }
 .riders img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .about {
-  background-image: url(./img/bg/bg_moto.jpg);
+  height: 532px;
+  background-image: url(./img/bg/bg_about.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-  font-family: "Lato", sans-serif;
+  background-position: top;
+  display: flex;
+  align-items: center;
 }
 .about-wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 179px 0px 117px 0px;
 }
 .about-block {
   width: 450px;
 }
 .about__title {
-  color: #ffffff;
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
@@ -302,73 +282,136 @@ body {
   margin-bottom: 36px;
 }
 .about p {
-  color: #ffffff;
   font-size: 17px;
   font-weight: 400;
   margin-bottom: 43px;
 }
-.about__button {
-  display: inline-block;
-  background-color: #ce0000;
-  color: #ffffff;
-  font-size: 17px;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: -0.75px;
-  cursor: pointer;
-  padding: 14px 16px;
-}
-.about__button:hover {
-  color: #ce0000;
-  background-color: #ffffff;
-}
 
 .comment {
-}
-.container {
+  height: 552px;
+  background-image: url(./img/bg/bg_comment.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  align-items: center;
 }
 .comment-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 45px;
 }
 .comment-block {
+  width: 535px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.comment-block p {
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  font-style: italic;
-}
-
 .comment-block-photo {
   width: 114px;
   height: 114px;
   border-radius: 50%;
   overflow: hidden;
+  margin-bottom: 47px;
 }
-.comment-block-photo-icon {
+.comment-block-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
-
+.comment-block p {
+  font-size: 20px;
+  font-style: italic;
+  margin-bottom: 46px;
+}
 .comment-block__title {
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.39px;
+  line-height: 2;
 }
 .comment-block__subtitle {
-  color: #ffffff;
-  font-family: "Lato", sans-serif;
   font-size: 20px;
   font-style: italic;
   letter-spacing: -0.39px;
 }
 .comment-slider {
   display: flex;
+  justify-content: space-around;
+  align-content: center;
+  padding: 0px 450px;
 }
-.comment-slider-arrow a {
+.arrow-red a {
   color: #ffffff;
   font-size: 33px;
-  font-weight: 400;
   text-decoration: none;
+  transition: color 0.2s ease-in;
+}
+.arrow-red a:hover {
+  color: #ce0000;
+}
+
+.shop {
+  height: 792px;
+  background-image: url(./img/bg/bg_shop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.shop__title {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 47px;
+}
+.shop p {
+  font-size: 20px;
+  margin-bottom: 70px;
+}
+.shop__slider {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shop-slider-bike__list {
+  display: flex;
+  list-style-type: none;
+  margin: 0 50px;
+}
+.shop-slider-bike__item {
+  width: 270px;
+  height: 245px;
+  position: relative;
+  margin-right: 31px;
+}
+.shop-slider-bike__item:last-child {
+  margin-right: 0;
+}
+
+.shop-slider-bike__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.shop-slider-bike__button {
+  position: absolute;
+  right: 50px;
+  bottom: -30px;
+}
+
+/* -------------UTILS-------------- */
+.none {
+  display: none;
+}
+.margin {
+  margin-bottom: 191px;
 }
