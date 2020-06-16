@@ -395,7 +395,6 @@ body {
 .shop-slider-bike__item:last-child {
   margin-right: 0;
 }
-
 .shop-slider-bike__item img {
   width: 100%;
   height: 100%;
@@ -406,6 +405,46 @@ body {
   position: absolute;
   right: 50px;
   bottom: -30px;
+}
+
+.club-blog {
+  height: 570px;
+  background-color: #ce0000;
+  display: flex;
+}
+.club-blog-desc {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 75px;
+  padding-right: 45px;
+}
+.club-blog-desc__title {
+  font-size: 31px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 45px;
+}
+.club-blog-desc p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+.club-blog-pictures {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.club-blog-pictures__item {
+  width: 50%;
+  height: 285px;
+}
+.club-blog-pictures__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* -------------UTILS-------------- */
