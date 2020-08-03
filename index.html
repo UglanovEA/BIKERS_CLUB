@@ -16,6 +16,14 @@
     />
     <link
       rel="stylesheet"
+      href="libs/owlcarousel2/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="libs/owlcarousel2/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
     <link rel="stylesheet" href="main.css" />
@@ -49,6 +57,24 @@
         </div>
       </div>
       <div class="header-content">
+        <div class="header-button">
+          <svg
+            class="ham hamRotate ham1"
+            viewBox="0 0 100 100"
+            width="80"
+            onclick="this.classList.toggle('active')"
+          >
+            <path
+              class="line top"
+              d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
+            />
+            <path class="line middle" d="m 30,50 h 40" />
+            <path
+              class="line bottom"
+              d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"
+            />
+          </svg>
+        </div>
         <div class="header-desc">
           <h3 class="header__subtitle">Lorem Ipsum is simply dummy text</h3>
           <h1 class="header__title">Live to Ride</h1>
@@ -60,7 +86,7 @@
           </p>
           <a href="#!" class="button">Learn More</a>
         </div>
-        <nav class="header-nav-hidden none">
+        <nav class="header-nav-hidden">
           <ul class="header-nav-hidden_list">
             <li><a href="#!">Home</a></li>
             <li><a href="#!">About us</a></li>
@@ -75,229 +101,250 @@
       </div>
     </header>
 
-    <section class="rider">
-      <div class="container">
-        <div class="club-info-wrapper">
-          <div class="club-info">
-            <h2 class="club-info__title">Lorem Ipsum is simply dummy text</h2>
-            <div class="club-info-content">
-              <div class="club-info-desc">
-                <h3 class="club-info-desc__subtitle">
-                  our customers are enjoying
-                </h3>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text
-                </p>
-                <div class="button-border">Learn More</div>
-              </div>
-              <div class="club-info-slider">
-                <div class="arrow">
-                  <a href="#!"> <i class="fas fa-angle-left"></i></a>
+    <main>
+      <section class="rider">
+        <div class="container">
+          <div class="club-info-wrapper">
+            <div class="club-info">
+              <h2 class="club-info__title">Lorem Ipsum is simply dummy text</h2>
+              <div class="club-info-content">
+                <div class="club-info-desc">
+                  <h3 class="club-info-desc__subtitle">
+                    our customers are enjoying
+                  </h3>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text
+                  </p>
+                  <div class="button-border">Learn More</div>
                 </div>
-                <div class="club-info-slider-img">
-                  <img src="./img/galery/biker2.jpg" alt="galery" />
-                </div>
-                <div class="arrow">
-                  <a href="#!"> <i class="fas fa-angle-right"></i></a>
+                <div class="club-info-slider">
+                  <div class="arrow">
+                    <a href="#!"> <i class="fas fa-angle-left"></i></a>
+                  </div>
+                  <div class="club-info-slider-img">
+                    <img src="./img/galery/biker2.jpg" alt="galery" />
+                  </div>
+                  <div class="arrow">
+                    <a href="#!"> <i class="fas fa-angle-right"></i></a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="our-riders none">
-          <div class="our-riders-desc">
-            <h2 class="our-riders__title">Lorem Ipsum is simply dummy text</h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not
-            </p>
-          </div>
-          <div class="riders">
-            <img src="./img/rider/moto1.jpg" alt="rider_1" />
-            <img src="./img/rider/moto2.jpg" alt="rider_2" />
-            <img src="./img/rider/moto3.jpg" alt="rider_3" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="about none">
-      <div class="container">
-        <div class="about-wrapper">
-          <div class="about-block">
-            <h2 class="about__title">
-              Lorem Ipsum is simply dummy text Lorem Ipsum is simply
-            </h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown
-            </p>
-            <div class="button">Learn More</div>
-          </div>
-          <div class="about-block">
-            <h2 class="about__title">
-              Lorem Ipsum is simply dummy text Lorem Ipsum is simply
-            </h2>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown
-            </p>
-            <div class="button">Learn More</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="comment none">
-      <div class="container">
-        <div class="comment-wrapper">
-          <div class="comment-block">
-            <div class="comment-block-photo">
-              <img src="./img/person/item1.jpg" alt="person" />
+          <div class="our-riders">
+            <div class="our-riders-desc">
+              <h2 class="our-riders__title">
+                Lorem Ipsum is simply dummy text
+              </h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not
+              </p>
             </div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not
-            </p>
-            <h2 class="comment-block__title">
-              our customers are enjoying
-            </h2>
-            <h3 class="comment-block__subtitle">our customers are enjoying</h3>
           </div>
-          <div class="comment-block">
-            <div class="comment-block-photo">
-              <img src="./img/person/item1.jpg" alt="person" />
+        </div>
+        <div class="our-riders-slider">
+          <div class="owl-carousel">
+            <div class="riders">
+              <img src="./img/rider/moto1.jpg" alt="rider_1" />
             </div>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not
-            </p>
-            <h2 class="comment-block__title">
-              our customers are enjoying
-            </h2>
-            <h3 class="comment-block__subtitle">our customers are enjoying</h3>
+            <div class="riders">
+              <img src="./img/rider/moto2.jpg" alt="rider_2" />
+            </div>
+            <div class="riders">
+              <img src="./img/rider/moto3.jpg" alt="rider_3" />
+            </div>
+            <div class="riders">
+              <img src="./img/rider/moto3.jpg" alt="rider_3" />
+            </div>
+            <div class="riders">
+              <img src="./img/rider/moto3.jpg" alt="rider_3" />
+            </div>
           </div>
         </div>
-        <div class="comment-slider">
-          <div class="arrow-red">
-            <a href="#!"> <i class="fas fa-angle-left"></i></a>
-          </div>
-          <div class="arrow-red">
-            <a href="#!"> <i class="fas fa-angle-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="shop none">
-      <div class="container">
-        <h2 class="shop__title">
-          Lorem Ipsum is simply dummy text of the printing
-        </h2>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived
-        </p>
-        <div class="shop__slider">
-          <div class="arrow-red">
-            <a href="#!"> <i class="fas fa-angle-left"></i></a>
-          </div>
-          <ul class="shop-slider-bike__list">
-            <li class="shop-slider-bike__item">
-              <img src="img/bike/bike1.jpg" alt="bike1" />
-              <div class="shop-slider-bike__button">
-                <a href="#!" class="button">Click here</a>
-              </div>
-            </li>
-            <li class="shop-slider-bike__item">
-              <img src="img/bike/bike2.jpg" alt="bike2" />
-              <div class="shop-slider-bike__button">
-                <a href="#!" class="button">Click here</a>
-              </div>
-            </li>
-            <li class="shop-slider-bike__item">
-              <img src="img/bike/bike3.jpg" alt="bike3" />
-              <div class="shop-slider-bike__button">
-                <a href="#!" class="button">Click here</a>
-              </div>
-            </li>
-            <li class="shop-slider-bike__item">
-              <img src="img/bike/bike4.jpg" alt="bike4" />
-              <div class="shop-slider-bike__button">
-                <a href="#!" class="button">Click here</a>
-              </div>
-            </li>
-          </ul>
-          <div class="arrow-red">
-            <a href="#!"> <i class="fas fa-angle-right"></i></a>
+      <section class="about">
+        <div class="container">
+          <div class="about-wrapper">
+            <div class="about-block">
+              <h3 class="about__title">
+                Lorem Ipsum is simply dummy text Lorem Ipsum is simply
+              </h3>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown
+              </p>
+              <div class="button">Learn More</div>
+            </div>
+            <div class="about-block">
+              <h3 class="about__title">
+                Lorem Ipsum is simply dummy text Lorem Ipsum is simply
+              </h3>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown
+              </p>
+              <div class="button">Learn More</div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="club-blog none">
-      <div class="club-blog-desc">
-        <div class="club-blog-desc__title">Club Blog</div>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap
-        </p>
-        <div class="button-border">Learn More</div>
-      </div>
-      <div class="club-blog-pictures">
-        <div class="club-blog-pictures__item">
-          <img src="img/blog/blog_bike1.jpg" alt="club_bike1" />
+      <section class="comments">
+        <div class="container">
+          <div class="comments-wrapper">
+            <div class="comments-block">
+              <div class="comments-block-photo">
+                <img src="./img/person/item1.jpg" alt="person" />
+              </div>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not
+              </p>
+              <h2 class="comments-block__title">
+                our customers are enjoying
+              </h2>
+              <h3 class="comments-block__subtitle">
+                our customers are enjoying
+              </h3>
+            </div>
+            <div class="comments-block">
+              <div class="comments-block-photo">
+                <img src="./img/person/item1.jpg" alt="person" />
+              </div>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not
+              </p>
+              <h2 class="comments-block__title">
+                our customers are enjoying
+              </h2>
+              <h3 class="comments-block__subtitle">
+                our customers are enjoying
+              </h3>
+            </div>
+          </div>
+          <div class="comments-slider">
+            <div class="arrow-red">
+              <a href="#!"> <i class="fas fa-angle-left"></i></a>
+            </div>
+            <div class="arrow-red">
+              <a href="#!"> <i class="fas fa-angle-right"></i></a>
+            </div>
+          </div>
         </div>
-        <div class="club-blog-pictures__item">
-          <img src="img/blog/blog_bike2.jpg" alt="club_bike2" />
-        </div>
-        <div class="club-blog-pictures__item">
-          <img src="img/blog/blog_bike3.jpg" alt="club_bike3" />
-        </div>
-        <div class="club-blog-pictures__item">
-          <img src="img/blog/blog_bike4.jpg" alt="club_bike4" />
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="signup none">
-      <div class="container">
-        <h2 class="singup__title"><span>SIGNUP</span> For Newsletter</h2>
-        <div class="signup-block">
+      <section class="shop">
+        <div class="container">
+          <h2 class="shop__title">
+            Lorem Ipsum is simply dummy text of the printing
+          </h2>
           <p>
-            Donec ac nisi eget sem ultrices tempus. Phasellus et sem quis felis
-            pharetra conv
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived
           </p>
-          <form action="#!" class="submit">
-            <input
-              type="text"
-              class="submit__input"
-              placeholder="Enter Your Email Address"
-            />
-            <input type="submit" class="submit__button" value="Submit" />
-          </form>
+          <div class="shop__slider">
+            <div class="arrow-red">
+              <a href="#!"> <i class="fas fa-angle-left"></i></a>
+            </div>
+            <ul class="shop-slider-bike__list">
+              <li class="shop-slider-bike__item">
+                <img src="img/bike/bike1.jpg" alt="bike1" />
+                <div class="shop-slider-bike__button">
+                  <a href="#!" class="button">Click here</a>
+                </div>
+              </li>
+              <li class="shop-slider-bike__item">
+                <img src="img/bike/bike2.jpg" alt="bike2" />
+                <div class="shop-slider-bike__button">
+                  <a href="#!" class="button">Click here</a>
+                </div>
+              </li>
+              <li class="shop-slider-bike__item">
+                <img src="img/bike/bike3.jpg" alt="bike3" />
+                <div class="shop-slider-bike__button">
+                  <a href="#!" class="button">Click here</a>
+                </div>
+              </li>
+              <li class="shop-slider-bike__item">
+                <img src="img/bike/bike4.jpg" alt="bike4" />
+                <div class="shop-slider-bike__button">
+                  <a href="#!" class="button">Click here</a>
+                </div>
+              </li>
+            </ul>
+            <div class="arrow-red">
+              <a href="#!"> <i class="fas fa-angle-right"></i></a>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
+      <section class="club-blog none">
+        <div class="club-blog-desc">
+          <div class="club-blog-desc__title">Club Blog</div>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap
+          </p>
+          <div class="button-border">Learn More</div>
+        </div>
+        <div class="club-blog-pictures">
+          <div class="club-blog-pictures__item">
+            <img src="img/blog/blog_bike1.jpg" alt="club_bike1" />
+          </div>
+          <div class="club-blog-pictures__item">
+            <img src="img/blog/blog_bike2.jpg" alt="club_bike2" />
+          </div>
+          <div class="club-blog-pictures__item">
+            <img src="img/blog/blog_bike3.jpg" alt="club_bike3" />
+          </div>
+          <div class="club-blog-pictures__item">
+            <img src="img/blog/blog_bike4.jpg" alt="club_bike4" />
+          </div>
+        </div>
+      </section>
+
+      <section class="signup none">
+        <div class="container">
+          <h2 class="singup__title"><span>SIGNUP</span> For Newsletter</h2>
+          <div class="signup-block">
+            <p>
+              Donec ac nisi eget sem ultrices tempus. Phasellus et sem quis
+              felis pharetra conv
+            </p>
+            <form action="#!" class="submit">
+              <input
+                type="text"
+                class="submit__input"
+                placeholder="Enter Your Email Address"
+              />
+              <input type="submit" class="submit__button" value="Submit" />
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer class="footer none">
       <div class="container">
         <div class="navigation footer-nav">
@@ -406,5 +453,9 @@
         <p>&copy; Copyrights 2015 by PSDFrebies.com. All rights reserved.</p>
       </div>
     </footer>
+
+    <script src="libs/jquery/jquery-3.5.1.min.js"></script>
+    <script src="libs/owlcarousel2/owl.carousel.min.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

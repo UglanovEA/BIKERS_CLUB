@@ -9,9 +9,14 @@ body {
   color: #ffffff;
 }
 .container {
-  max-width: 1172px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+@media (min-width: 1230px) {
+  .container {
+    width: 1172px;
+  }
 }
 .header {
   background-color: #ce0000;
@@ -76,10 +81,14 @@ body {
   margin-right: 30px;
 }
 .header-content {
-  height: 585px;
+  overflow-x: hidden;
+  width: 100%;
+  height: calc(100vh - 72px);
   position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-image: url(./img/bg/bg_header.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -90,24 +99,24 @@ body {
     height: 785px;
   }
 }
+.header-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
 .header-desc {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-@media (min-width: 800px) {
-  .header-desc {
-    align-items: flex-start;
-    text-align: start;
-  }
+  padding: 0 20px;
 }
 .header__subtitle {
   font-size: 22px;
   text-transform: uppercase;
   letter-spacing: -0.75px;
-  padding: 0 10px;
   margin-bottom: 30px;
 }
 @media (min-width: 650px) {
@@ -119,7 +128,6 @@ body {
 @media (min-width: 800px) {
   .header__subtitle {
     font-size: 36px;
-    margin-bottom: 0;
   }
 }
 .header__title {
@@ -127,7 +135,7 @@ body {
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding: 0 10px;
+
   margin-bottom: 30px;
 }
 @media (min-width: 450px) {
@@ -144,23 +152,20 @@ body {
 @media (min-width: 800px) {
   .header__title {
     font-size: 117px;
-    margin-bottom: 0;
   }
 }
 .header-content p {
-  font-size: 17px;
+  font-size: 14px;
   word-break: break-all;
-  margin-bottom: 50px;
-  padding: 0 10px;
+  margin-bottom: 30px;
 }
 @media (min-width: 800px) {
   .header-content p {
     font-size: 20px;
+    margin-bottom: 50px;
   }
 }
 .button {
-  width: 180px;
-  height: 45px;
   display: block;
   color: #ffffff;
   font-size: 18px;
@@ -173,7 +178,6 @@ body {
   border: none;
   cursor: pointer;
   transition: all 0.2s ease-in;
-  padding: 13px 0px;
 }
 @media (min-width: 450px) {
   .button {
@@ -189,22 +193,28 @@ body {
 }
 .header-nav-hidden {
   position: absolute;
-  left: 0;
+  left: -100%;
   top: 0;
+  z-index: 0;
   height: 100%;
   width: 300px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.95);
   display: flex;
   flex-direction: column;
   text-align: end;
   list-style-type: none;
+  transition: all 0.8s ease-in;
+}
+.header-nav-hidden.active {
+  left: 0;
+  transition: all 0.8s ease-out;
 }
 .header-nav-hidden_list {
   padding-right: 50px;
   padding-top: 50px;
 }
 .header-nav-hidden a {
-  color: #ffffff;
+  color: #ce0000;
   font-size: 20px;
   font-weight: 400;
   line-height: 2.4;
@@ -214,49 +224,50 @@ body {
   transition: color 0.2s ease-in;
 }
 .header-nav-hidden a:hover {
-  color: #ce0000;
+  color: #ffffff;
 }
 
 .rider {
+  height: 100%;
   position: relative;
-  height: 1120px;
-  display: flex;
-  align-items: center;
+}
+@media (min-width: 1230px) {
+  .rider {
+    position: relative;
+    height: 1120px;
+  }
 }
 .club-info-wrapper {
-  width: 550px;
-  height: 681px;
+  width: 100%;
+  height: 490px;
   background-color: #ce0000;
-  position: absolute;
-  top: -80px;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 0;
+  left: 0;
 }
 @media (min-width: 800px) {
   .club-info-wrapper {
-    width: 750px;
-    height: 481px;
+    height: 510px;
   }
 }
 @media (min-width: 1230px) {
   .club-info-wrapper {
     width: 1172px;
+    height: 481px;
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 .club-info {
-  padding: 35px 35px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
-}
-@media (min-width: 800px) {
-  .club-info {
-    align-items: baseline;
-  }
+  padding: 30px 20px;
 }
 @media (min-width: 1230px) {
   .club-info {
+    text-align: inherit;
     padding: 63px 53px 75px;
   }
 }
@@ -264,82 +275,122 @@ body {
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 @media (min-width: 800px) {
   .club-info__title {
-    font-size: 40px;
+    font-size: 35px;
   }
 }
 @media (min-width: 1230px) {
   .club-info__title {
+    font-size: 40px;
     margin-bottom: 63px;
+  }
+}
+.club-info-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 1230px) {
+  .club-info-content {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 .club-info-desc {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
-}
-@media (min-width: 800px) {
-  .club-info-desc {
-    width: 245px;
-  }
+  align-items: center;
+  justify-content: center;
 }
 @media (min-width: 1230px) {
   .club-info-desc {
     width: 345px;
+    align-items: inherit;
+    text-align: inherit;
   }
 }
 .club-info-desc__subtitle {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 700;
-  padding-bottom: 30px;
+  margin-bottom: 20px;
 }
 @media (min-width: 800px) {
   .club-info-desc__subtitle {
+    font-size: 26px;
+  }
+}
+@media (min-width: 1230px) {
+  .club-info-desc__subtitle {
     font-size: 30px;
+    margin-bottom: 30px;
   }
 }
 .club-info-desc p {
-  font-size: 17px;
-  padding-bottom: 40px;
+  font-size: 14px;
+  word-break: break-all;
+  margin-bottom: 30px;
+}
+@media (min-width: 800px) {
+  .club-info-desc p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1230px) {
+  .club-info-desc p {
+    font-size: 17px;
+    margin-bottom: 40px;
+  }
 }
 .button-border {
-  display: inline-block;
+  width: 135px;
+  height: 41px;
+  display: block;
   border: 2px solid #ffffff;
   font-size: 17px;
   text-transform: uppercase;
   letter-spacing: -0.75px;
   cursor: pointer;
   transition: all 0.2s ease-in;
-  padding: 14px 16px;
+  padding: 10px 14px;
+  margin-bottom: 30px;
+}
+@media (min-width: 1230px) {
+  .button-border {
+    margin-bottom: 0px;
+  }
 }
 .button-border:hover {
   color: #ce0000;
   background-color: #ffffff;
 }
 .club-info-slider {
-  width: 500px;
+  width: 320px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  position: absolute;
-  right: 10;
-  bottom: 50px;
   z-index: 2;
 }
-@media (min-width: 800px) {
+@media (min-width: 450px) {
   .club-info-slider {
-    width: 710px;
-    bottom: -20px;
+    width: 380px;
+  }
+}
+@media (min-width: 650px) {
+  .club-info-slider {
+    width: 425px;
   }
 }
 @media (min-width: 1230px) {
   .club-info-slider {
     width: 710px;
+    position: absolute;
+    right: 10px;
     bottom: -20px;
   }
 }
@@ -356,10 +407,17 @@ body {
   color: #1b1b1b;
 }
 .club-info-slider-img {
-  max-width: 570px;
-  height: auto;
-  border: 10px solid #ffffff;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #ffffff;
   position: relative;
+}
+@media (min-width: 1230px) {
+  .club-info-slider-img {
+    width: 570px;
+    height: 360px;
+    border: 10px solid #ffffff;
+  }
 }
 .club-info-slider-img img {
   width: 100%;
@@ -371,7 +429,7 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  border: 10px solid #ffffff;
+  border: 5px solid #ffffff;
   background-image: url(./img/galery/biker2.jpg);
   position: absolute;
   top: 0;
@@ -379,24 +437,69 @@ body {
   z-index: -1;
   transform: rotateZ(-5deg);
 }
-
+@media (min-width: 1230px) {
+  .club-info-slider-img::before {
+    border: 10px solid #ffffff;
+  }
+}
+.our-riders-desc {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 30px 20px;
+}
+@media (min-width: 1230px) {
+  .our-riders-desc {
+    text-align: inherit;
+    padding: 550px 0px 0px;
+  }
+}
 .our-riders__title {
-  font-size: 51px;
+  font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-bottom: 47px;
+  margin-bottom: 30px;
+}
+@media (min-width: 800px) {
+  .our-riders__title {
+    font-size: 35px;
+  }
+}
+@media (min-width: 1230px) {
+  .our-riders__title {
+    font-size: 51px;
+    margin-bottom: 47px;
+  }
 }
 .our-riders p {
-  font-size: 20px;
+  font-size: 14px;
+}
+@media (min-width: 800px) {
+  .our-riders p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1230px) {
+  .our-riders p {
+    font-size: 20px;
+  }
+}
+.our-riders-slider {
+  width: 100%;
+  position: absolute;
+  bottom: -20px;
 }
 .riders {
   width: 100%;
-  height: 410px;
+  height: 250px;
   display: flex;
-  position: absolute;
-  left: 0;
-  bottom: -38px;
+}
+@media (min-width: 1230px) {
+  .riders {
+    width: 100%;
+    height: 410px;
+  }
 }
 .riders img {
   width: 100%;
@@ -406,91 +509,182 @@ body {
 }
 
 .about {
-  height: 532px;
+  height: 100%;
   background-image: url(./img/bg/bg_about.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   display: flex;
   align-items: center;
+  padding: 30px 20px;
+}
+@media (min-width: 1230px) {
+  .about {
+    height: 532px;
+    padding: 0px;
+  }
 }
 .about-wrapper {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 1230px) {
+  .about-wrapper {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
 .about-block {
-  width: 450px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media (min-width: 1230px) {
+  .about-block {
+    width: 450px;
+    align-items: flex-start;
+    text-align: inherit;
+    margin-bottom: 0px;
+  }
 }
 .about__title {
-  font-size: 30px;
+  font-size: 22px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.58px;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
+}
+@media (min-width: 800px) {
+  .about__title {
+    font-size: 26px;
+  }
+}
+@media (min-width: 1230px) {
+  .about__title {
+    font-size: 30px;
+    margin-bottom: 36px;
+  }
 }
 .about p {
-  font-size: 17px;
+  font-size: 14px;
   font-weight: 400;
-  margin-bottom: 43px;
+  margin-bottom: 30px;
+}
+@media (min-width: 800px) {
+  .about p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1230px) {
+  .about p {
+    font-size: 17px;
+    margin-bottom: 43px;
+  }
 }
 
-.comment {
-  height: 552px;
+.comments {
+  height: 100%;
   background-image: url(./img/bg/bg_comment.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
   display: flex;
   align-items: center;
+  padding: 30px 20px;
 }
-.comment-wrapper {
+@media (min-width: 1230px) {
+  .comments {
+    height: 552px;
+    padding: 0;
+  }
+}
+.comments-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   margin-bottom: 45px;
 }
-.comment-block {
-  width: 535px;
+@media (min-width: 1230px) {
+  .comments-wrapper {
+    flex-direction: row;
+  }
+}
+.comments-block {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  margin-bottom: 60px;
 }
-.comment-block-photo {
+@media (min-width: 1230px) {
+  .comments-block {
+    width: 535px;
+    text-align: inherit;
+    margin-bottom: 0;
+  }
+}
+.comments-block-photo {
   width: 114px;
   height: 114px;
   border-radius: 50%;
   overflow: hidden;
-  margin-bottom: 47px;
+  margin-bottom: 20px;
 }
-.comment-block-photo img {
+@media (min-width: 1230px) {
+  .comments-block-photo {
+    margin-bottom: 47px;
+  }
+}
+.comments-block-photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
-.comment-block p {
-  font-size: 20px;
+.comments-block p {
+  font-size: 14px;
   font-style: italic;
-  margin-bottom: 46px;
+  word-break: break-all;
+  margin-bottom: 20px;
 }
-.comment-block__title {
+@media (min-width: 800px) {
+  .comments-block p {
+    font-size: 16px;
+  }
+}
+@media (min-width: 1230px) {
+  .comments-block p {
+    font-size: 20px;
+    margin-bottom: 46px;
+  }
+}
+.comments-block__title {
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: -0.39px;
-  line-height: 2;
+  margin-bottom: 20px;
 }
-.comment-block__subtitle {
+.comments-block__subtitle {
   font-size: 20px;
   font-style: italic;
   letter-spacing: -0.39px;
 }
-.comment-slider {
+.comments-slider {
   display: flex;
   justify-content: space-around;
   align-content: center;
-  padding: 0px 450px;
+}
+@media (min-width: 1230px) {
+  .comments-slider {
+    padding: 0px 450px;
+  }
 }
 .arrow-red a {
   color: #ffffff;
@@ -514,14 +708,26 @@ body {
   align-items: center;
 }
 .shop__title {
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: 47px;
+  margin-bottom: 30px;
+}
+@media (min-width: 1230px) {
+  .shop__title {
+    font-size: 40px;
+    margin-bottom: 47px;
+  }
 }
 .shop p {
-  font-size: 20px;
-  margin-bottom: 70px;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+@media (min-width: 1230px) {
+  .shop p {
+    font-size: 20px;
+    margin-bottom: 70px;
+  }
 }
 .shop__slider {
   width: 100%;
@@ -551,8 +757,8 @@ body {
 }
 .shop-slider-bike__button {
   position: absolute;
-  right: 100%;
-  transform: translateX(-100%);
+  left: 50%;
+  margin-left: -111px;
   bottom: -30px;
 }
 
@@ -788,4 +994,45 @@ body {
 }
 .margin-bottom {
   margin-bottom: 65px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+/* -------------NAV-BUTTON-------------- */
+.ham {
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate180.active {
+  transform: rotate(180deg);
+}
+.line {
+  fill: none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke: #ce0000;
+  stroke-width: 5.5;
+  stroke-linecap: round;
+}
+.ham1 .top {
+  stroke-dasharray: 40 139;
+}
+.ham1 .bottom {
+  stroke-dasharray: 40 180;
+}
+.ham1.active .top {
+  stroke-dashoffset: -98px;
+}
+.ham1.active .bottom {
+  stroke-dashoffset: -138px;
 }
