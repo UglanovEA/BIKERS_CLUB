@@ -716,7 +716,7 @@ body {
 }
 
 .shop {
-  height: 792px;
+  height: 100%;
   background-image: url(./img/bg/bg_shop.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -725,48 +725,81 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 30px 20px;
+}
+@media (min-width: 1230px) {
+  .shop {
+    height: 792px;
+    padding: 0;
+  }
 }
 .shop__title {
   font-size: 30px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
   margin-bottom: 30px;
 }
 @media (min-width: 1230px) {
   .shop__title {
     font-size: 40px;
+    text-align: inherit;
     margin-bottom: 47px;
   }
 }
 .shop p {
   font-size: 14px;
+  text-align: center;
   margin-bottom: 30px;
 }
 @media (min-width: 1230px) {
   .shop p {
     font-size: 20px;
+    text-align: inherit;
     margin-bottom: 70px;
   }
 }
-.shop__slider {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.shop-slider-wrapper {
+  height: 230px;
+  position: relative;
 }
-.shop-slider-bike {
-  display: flex;
-  list-style-type: none;
-  margin: 0 50px;
+@media (min-width: 450px) {
+  .shop-slider-wrapper {
+    height: 305px;
+  }
+}
+@media (min-width: 1230px) {
+  .shop-slider-wrapper {
+    height: 290px;
+    margin-bottom: 30px;
+  }
+}
+.shop__slider {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+@media (min-width: 1230px) {
+  .shop__slider {
+    left: 0;
+    right: 0;
+  }
 }
 .shop-slider-bike__item {
-  width: 270px;
-  height: 245px;
+  width: auto;
+  height: 170px;
   position: relative;
-  margin-right: 31px;
+  margin-bottom: 32px;
 }
-.shop-slider-bike__item:last-child {
-  margin-right: 0;
+@media (min-width: 450px) {
+  .shop-slider-bike__item {
+    height: 245px;
+  }
+}
+@media (min-width: 1230px) {
+  .shop-slider-bike__item {
+    width: 270px;
+  }
 }
 .shop-slider-bike__item img {
   width: 100%;
@@ -801,7 +834,62 @@ body {
   color: #ce0000;
   background-color: #ffffff;
 }
-
+.shop-slider-controls {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+}
+@media (min-width: 1230px) {
+  .shop-slider-controls {
+    position: relative;
+  }
+}
+.shop-slider__left {
+  width: 14px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 33px;
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+  padding: 15px;
+  cursor: pointer;
+}
+@media (min-width: 1230px) {
+  .shop-slider__left {
+    position: absolute;
+    left: -70px;
+    bottom: 145px;
+    transform: translate(-100%, -100%);
+  }
+}
+.shop-slider__right {
+  width: 14px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 33px;
+  text-decoration: none;
+  transition: color 0.2s ease-in;
+  padding: 15px;
+  cursor: pointer;
+}
+@media (min-width: 1230px) {
+  .shop-slider__right {
+    position: absolute;
+    right: -70px;
+    bottom: 145px;
+    transform: translate(100%, -100%);
+  }
+}
+.shop-slider__left:hover,
+.shop-slider__right:hover {
+  color: #ce0000;
+}
 .club-blog {
   height: 570px;
   background-color: #ce0000;

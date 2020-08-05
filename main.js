@@ -67,24 +67,30 @@ $(document).ready(function () {
 
   const shopcontrols = $("#ShopCarousel");
   shopcontrols.owlCarousel({
-    items: 3,
+    items: 4,
     loop: true,
     dots: false,
-    margin: 20,
+    margin: 30,
     smartSpeed: 1000,
     responsive: {
       0: {
         items: 1,
       },
-      1000: {
+      550: {
         items: 2,
+      },
+      850: {
+        items: 3,
+      },
+      1250: {
+        items: 4,
       },
     },
   });
-  $("#comcontrolsleft").click(function () {
-    commentcontrols.trigger("next.owl.carousel");
+  $("#shopcontrolsleft").click(function () {
+    shopcontrols.trigger("next.owl.carousel");
   });
-  $("#comcontrolsright").click(function () {
-    commentcontrols.trigger("prev.owl.carousel");
+  $("#shopcontrolsright").click(function () {
+    shopcontrols.trigger("prev.owl.carousel");
   });
 });
