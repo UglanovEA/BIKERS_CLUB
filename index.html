@@ -30,7 +30,7 @@
     <title>Bikers Club</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header none">
       <div class="container">
         <div class="navigation">
           <a href="#!" class="logo">
@@ -173,6 +173,7 @@
           </div>
         </div>
       </section>
+
       <section class="about">
         <div class="container">
           <div class="about-wrapper">
@@ -185,7 +186,7 @@
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown
               </p>
-              <div class="button">Learn More</div>
+              <div class="about-block__button">Learn More</div>
             </div>
             <div class="about-block">
               <h3 class="about__title">
@@ -196,11 +197,12 @@
                 industry. Lorem Ipsum has been the industry's standard dummy
                 text ever since the 1500s, when an unknown
               </p>
-              <div class="button">Learn More</div>
+              <div class="about-block__button">Learn More</div>
             </div>
           </div>
         </div>
       </section>
+
       <section class="comments">
         <div class="container">
           <div class="comments-wrapper">
@@ -244,15 +246,16 @@
             </div>
           </div>
           <div class="comments-slider">
-            <div id="comcontrolsright" class="arrow-red">
-              <a href="#!"> <i class="fas fa-angle-left"></i></a>
+            <div id="comcontrolsright" class="comments-slider__control">
+              <i class="fas fa-angle-left"></i>
             </div>
-            <div id="comcontrolsleft" class="arrow-red">
-              <a href="#!"> <i class="fas fa-angle-right"></i></a>
+            <div id="comcontrolsleft" class="comments-slider__control">
+              <i class="fas fa-angle-right"></i>
             </div>
           </div>
         </div>
       </section>
+
       <section class="shop">
         <div class="container">
           <h2 class="shop__title">
@@ -309,7 +312,7 @@
 
       <section class="club-blog">
         <div class="club-blog-desc">
-          <div class="club-blog-desc__title">Club Blog</div>
+          <h2 class="club-blog-desc__title">Club Blog</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -335,7 +338,7 @@
         </div>
       </section>
 
-      <section class="signup none">
+      <section class="signup">
         <div class="container">
           <h2 class="singup__title"><span>SIGNUP</span> For Newsletter</h2>
           <div class="signup-block">
@@ -355,7 +358,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer none">
+    <footer class="footer">
       <div class="container">
         <div class="navigation footer-nav">
           <a href="#!" class="logo footer-logo">
@@ -381,84 +384,111 @@
           </nav>
         </div>
       </div>
+
       <div class="footer-contacts">
-        <div class="container row">
-          <div class="footer-contacts-about">
-            <h3 class="footer-contacts-title">
-              About Motclub
-            </h3>
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type
-            </p>
-            <div class="button">More Info</div>
-          </div>
-          <div class="footer-contacts-latest">
-            <h3 class="footer-contacts-title">Latest Event</h3>
-            <div class="footer-contacts-latest-event">
-              <div class="footer-contacts-latest-event-data">
-                <div class="footer-contacts-latest-event-data__month">Mar</div>
-                <div class="footer-contacts-latest-event-data__number">15</div>
-              </div>
-              <div class="footer-contacts-latest-event-desk">
-                <div class="footer-contacts-latest-event-desk__title">
-                  Event Name
+        <div class="container">
+          <div class="footer-contacts-row">
+            <div class="footer-contacts-about">
+              <h3 class="footer-contacts-title">About Motclub</h3>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type
+              </p>
+              <div class="footer-contacts__button">More Info</div>
+            </div>
+
+            <div class="footer-contacts-latest">
+              <h3 class="footer-contacts-title">Latest Event</h3>
+              <div class="footer-contacts-latest-event">
+                <div class="footer-contacts-latest-event-data">
+                  <div class="footer-contacts-latest-event-data__month">
+                    Mar
+                  </div>
+                  <div class="footer-contacts-latest-event-data__number">
+                    15
+                  </div>
                 </div>
-                <p>Lorem Ipsum is simply dummy text</p>
+                <div class="footer-contacts-latest-event-desk">
+                  <div class="footer-contacts-latest-event-desk__title">
+                    Event Name
+                  </div>
+                  <p>Lorem Ipsum is simply dummy text</p>
+                </div>
+              </div>
+              <div class="footer-contacts-latest-event">
+                <div class="footer-contacts-latest-event-data">
+                  <div class="footer-contacts-latest-event-data__month">
+                    Mar
+                  </div>
+                  <div class="footer-contacts-latest-event-data__number">
+                    07
+                  </div>
+                </div>
+                <div class="footer-contacts-latest-event-desk">
+                  <div class="footer-contacts-latest-event-desk__title">
+                    Event Name
+                  </div>
+                  <p>Lorem Ipsum is simply dummy text</p>
+                </div>
+              </div>
+              <div class="footer-contacts-latest-event">
+                <div class="footer-contacts-latest-event-data">
+                  <div class="footer-contacts-latest-event-data__month">
+                    Mar
+                  </div>
+                  <div class="footer-contacts-latest-event-data__number">
+                    04
+                  </div>
+                </div>
+                <div class="footer-contacts-latest-event-desk">
+                  <div class="footer-contacts-latest-event-desk__title">
+                    Event Name
+                  </div>
+                  <p>Lorem Ipsum is simply dummy text</p>
+                </div>
+              </div>
+              <div class="footer-contacts-latest-event">
+                <div class="footer-contacts-latest-event-data">
+                  <div class="footer-contacts-latest-event-data__month">
+                    Mar
+                  </div>
+                  <div class="footer-contacts-latest-event-data__number">
+                    02
+                  </div>
+                </div>
+                <div class="footer-contacts-latest-event-desk">
+                  <div class="footer-contacts-latest-event-desk__title">
+                    Event Name
+                  </div>
+                  <p>Lorem Ipsum is simply dummy text</p>
+                </div>
               </div>
             </div>
-            <div class="footer-contacts-latest-event">
-              <div class="footer-contacts-latest-event-data">
-                <div class="footer-contacts-latest-event-data__month">Mar</div>
-                <div class="footer-contacts-latest-event-data__number">07</div>
-              </div>
-              <div class="footer-contacts-latest-event-desk">
-                <div class="footer-contacts-latest-event-desk__title">
-                  Event Name
+
+            <div class="footer-contacts-info">
+              <h3 class="footer-contacts-info__title">Contact info</h3>
+              <div class="footer-contacts-info__phone">(+44) 123 456 789</div>
+              <div class="footer-contacts-info-address">
+                <h3 class="footer-contacts-info-address__title">
+                  Club Address
+                </h3>
+                <p>638 Ground Road, Main Station, London 00765</p>
+                <div class="footer-contacts-info-address-email">
+                  <div class="footer-contacts-info-address-email__email">
+                    Email:
+                  </div>
+                  <div class="footer-contacts-info-address-email__mail">
+                    hello@PSDFreebies.com hello@PSDFreebies.com
+                  </div>
                 </div>
-                <p>Lorem Ipsum is simply dummy text</p>
-              </div>
-            </div>
-            <div class="footer-contacts-latest-event">
-              <div class="footer-contacts-latest-event-data">
-                <div class="footer-contacts-latest-event-data__month">Mar</div>
-                <div class="footer-contacts-latest-event-data__number">04</div>
-              </div>
-              <div class="footer-contacts-latest-event-desk">
-                <div class="footer-contacts-latest-event-desk__title">
-                  Event Name
-                </div>
-                <p>Lorem Ipsum is simply dummy text</p>
-              </div>
-            </div>
-            <div class="footer-contacts-latest-event">
-              <div class="footer-contacts-latest-event-data">
-                <div class="footer-contacts-latest-event-data__month">Mar</div>
-                <div class="footer-contacts-latest-event-data__number">02</div>
-              </div>
-              <div class="footer-contacts-latest-event-desk">
-                <div class="footer-contacts-latest-event-desk__title">
-                  Event Name
-                </div>
-                <p>Lorem Ipsum is simply dummy text</p>
-              </div>
-            </div>
-          </div>
-          <div class="footer-contacts-info">
-            <h3 class="footer-contacts-title">Contact info</h3>
-            <div class="footer-contacts-info__phone">(+44) 123 456 789</div>
-            <div class="footer-contacts-info-address">
-              <h3 class="footer-contacts-info-address__title">Club Address</h3>
-              <p>638 Ground Road, Main Station, London 00765</p>
-              <div class="footer-contacts-info-address__email">
-                Email: hello@PSDFreebies.com hello@PSDFreebies.com
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <div class="footer-copyright">
         <p>&copy; Copyrights 2015 by PSDFrebies.com. All rights reserved.</p>
       </div>
