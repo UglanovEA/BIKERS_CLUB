@@ -12,8 +12,13 @@ $(document).ready(function () {
   clubcontrols.owlCarousel({
     items: 1,
     loop: true,
-    dots: false,
+    dots: true,
     smartSpeed: 1000,
+    responsive: {
+      1230: {
+        dots: false,
+      },
+    },
   });
   $("#clubcontrolsleft,#comcontrolsleft").click(function () {
     clubcontrols.trigger("next.owl.carousel");
@@ -26,18 +31,18 @@ $(document).ready(function () {
   ourcontrols.owlCarousel({
     items: 3,
     loop: true,
-    dots: false,
-
+    dots: true,
     smartSpeed: 1000,
     responsive: {
       0: {
         items: 1,
       },
-      600: {
+      550: {
         items: 2,
       },
-      1000: {
+      900: {
         items: 3,
+        dots: false,
       },
     },
   });
