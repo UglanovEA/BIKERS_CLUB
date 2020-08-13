@@ -60,14 +60,17 @@ body {
 }
 .nav__list {
   display: none;
+  text-decoration: none;
+  list-style-type: none;
 }
 @media (min-width: 650px) {
   .nav__list {
     display: flex;
     flex-direction: row;
-    text-decoration: none;
-    list-style-type: none;
   }
+}
+.nav__item {
+  list-style-type: none;
 }
 .nav__list a {
   font-size: 23px;
@@ -210,6 +213,7 @@ body {
   transition: all 0.8s ease-out;
 }
 .header-nav-hidden_list {
+  list-style-type: none;
   padding-right: 50px;
   padding-top: 50px;
 }
@@ -1105,6 +1109,32 @@ body {
 .submit__button:hover {
   color: #ce0000;
   background-color: #ffffff;
+}
+.scroll {
+  display: none;
+}
+.arrow {
+  width: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 60px;
+  cursor: pointer;
+  z-index: 2;
+  animation: arrowUp 2s infinite;
+}
+.arrow.two {
+  opacity: 0;
+  animation-delay: 1s;
+}
+@keyframes arrowUp {
+  0% {
+    bottom: 30px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 70px;
+    opacity: 0;
+  }
 }
 
 .footer-nav {
