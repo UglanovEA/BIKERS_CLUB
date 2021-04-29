@@ -1,7 +1,14 @@
 .navigation {
   height: 75px;
   display: flex;
+  justify-content: center;
   align-items: center;
+  background-color: #ce0000;
+}
+@media (min-width: 500px) {
+  .navigation {
+    justify-content: space-around;
+  }
 }
 .logo {
   color: #ffffff;
@@ -23,8 +30,15 @@
   color: #1b1b1b;
 }
 .nav__list {
+  display: none;
+  flex-direction: row;
   text-decoration: none;
   list-style-type: none;
+}
+@media (min-width: 500px) {
+  .nav__list {
+    display: flex;
+  }
 }
 .nav__list a {
   color: #ffffff;
