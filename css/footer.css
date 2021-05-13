@@ -14,7 +14,7 @@
   padding: 100px 10px;
 }
 .about_motoclub {
-  width: 320px;
+  width: 370px;
   text-align: center;
   margin-bottom: 100px;
 }
@@ -27,7 +27,7 @@
   margin-top: 30px;
 }
 .latest_event {
-  width: 320px;
+  width: 370px;
   margin-bottom: 100px;
 }
 .latest_event .about_us__title {
@@ -39,7 +39,7 @@
   }
 }
 .contact_info {
-  width: 320px;
+  width: 370px;
   text-align: center;
 }
 @media (min-width: 1230px) {
