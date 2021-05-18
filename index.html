@@ -16,11 +16,20 @@
     />
     <link
       rel="stylesheet"
+      href="./libs/owlcarousel2/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./libs/owlcarousel2/assets/owl.theme.default.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./css/nav.css" />
     <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/shop.css" />
     <link rel="stylesheet" href="./css/blog.css" />
     <link rel="stylesheet" href="./css/signup.css" />
     <link rel="stylesheet" href="./css/footer.css" />
@@ -28,7 +37,63 @@
   </head>
   <body>
     <main>
-      <section id="blog" class="club-blog">
+      <section id="shop" class="shop">
+        <div class="shop-shadow">
+          <div class="container">
+            <div class="shop-desk">
+              <h2 class="shop-desk__title">
+                Lorem Ipsum is simply dummy text of the printing
+              </h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived
+              </p>
+            </div>
+            <div class="shop-slider-wrapper">
+              <div class="shop-slider">
+                <div id="ShopCarousel" class="owl-carousel owl-theme">
+                  <div class="shop-slider-bike__item items">
+                    <img src="./img/shopbikes/bike1.jpg" alt="bike1" />
+                    <div class="shop-slider-bike__button">
+                      <a href="#!" class="shop-slider__button">Click here</a>
+                    </div>
+                  </div>
+                  <div class="shop-slider-bike__item items">
+                    <img src="./img/shopbikes/bike2.jpg" alt="bike2" />
+                    <div class="shop-slider-bike__button">
+                      <a href="#!" class="shop-slider__button">Click here</a>
+                    </div>
+                  </div>
+                  <div class="shop-slider-bike__item items">
+                    <img src="./img/shopbikes/bike3.jpg" alt="bike3" />
+                    <div class="shop-slider-bike__button">
+                      <a href="#!" class="shop-slider__button">Click here</a>
+                    </div>
+                  </div>
+                  <div class="shop-slider-bike__item items">
+                    <img src="./img/shopbikes/bike4.jpg" alt="bike4" />
+                    <div class="shop-slider-bike__button">
+                      <a href="#!" class="shop-slider__button">Click here</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="shop-slider-controls">
+              <div id="shopcontrolsright" class="shop-slider__left">
+                <i class="fas fa-angle-left"></i>
+              </div>
+              <div id="shopcontrolsleft" class="shop-slider__right">
+                <i class="fas fa-angle-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- <section id="blog" class="club-blog">
         <div class="club-blog-desc">
           <h2 class="club-blog-desc__title">Club Blog</h2>
           <p>
@@ -62,7 +127,7 @@
             /></a>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- <section id="offer" class="signup">
         <div class="signup-shadow">
           <div class="container">
@@ -189,5 +254,7 @@
         <p>&copy; Copyrights 2015 by PSDFrebies.com. All rights reserved.</p>
       </div>
     </footer> -->
+    <script src="libs/jquery/jquery-3.5.1.min.js"></script>
+    <script src="libs/owlcarousel2/owl.carousel.min.js"></script>
   </body>
 </html>
