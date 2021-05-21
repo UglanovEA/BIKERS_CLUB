@@ -65,18 +65,20 @@ $(document).ready(function () {
   shopcontrols.owlCarousel({
     items: 4,
     loop: true,
-    dots: false,
     margin: 30,
     smartSpeed: 1000,
     responsive: {
       0: {
         items: 1,
+        dots: true,
       },
       550: {
         items: 2,
+        dots: true,
       },
       850: {
         items: 3,
+        dots: true,
       },
       1250: {
         items: 4,

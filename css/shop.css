@@ -16,12 +16,14 @@
 .shop-desk__title {
   font-size: 30px;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
   margin-bottom: 30px;
 }
 @media (min-width: 1230px) {
   .shop-desk__title {
     font-size: 40px;
+    text-align: inherit;
   }
 }
 .shop-desk p {
@@ -40,6 +42,16 @@
   height: 250px;
   position: relative;
 }
+.owl-theme .owl-nav.disabled + .owl-dots {
+  margin-top: 50px;
+}
+.owl-theme .owl-dots .owl-dot span {
+  background: #ce0000;
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: #ffffff;
+}
 .item {
   height: 230px;
 }
@@ -52,11 +64,16 @@
 .shop-slider-bike__button {
   position: absolute;
   bottom: 0;
-  left: -50%;
-  transform: translateX(100%);
+  right: 50%;
+  transform: translateX(50%);
   margin-bottom: 5px;
 }
+.shop-slider-controls button {
+  background: none;
+  border: none;
+}
 .arrow {
+  display: none;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -66,6 +83,12 @@
   transition: color 0.2s ease-in;
   padding: 15px;
   cursor: pointer;
+}
+@media (min-width: 1300px) {
+  .arrow {
+    display: block;
+    text-align: inherit;
+  }
 }
 .arrow i {
   outline-color: #aaaaaa;

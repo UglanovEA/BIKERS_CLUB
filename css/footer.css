@@ -11,16 +11,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  padding: 100px 10px;
+  padding: 100px 20px;
 }
 .about_motoclub {
   width: 370px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
   margin-bottom: 100px;
 }
 @media (min-width: 1230px) {
   .about_motoclub {
     text-align: inherit;
+    align-items: baseline;
   }
 }
 .about_motoclub .button {
@@ -30,14 +34,7 @@
   width: 370px;
   margin-bottom: 100px;
 }
-.latest_event .about_us__title {
-  text-align: center;
-}
-@media (min-width: 1230px) {
-  .latest_event .about_us__title {
-    text-align: inherit;
-  }
-}
+
 .contact_info {
   width: 370px;
   text-align: center;
@@ -147,8 +144,14 @@
 .about_us__title {
   font-size: 25px;
   font-weight: 700;
+  text-align: center;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+@media (min-width: 1230px) {
+  .about_us__title {
+    text-align: inherit;
+  }
 }
 .about_us p {
   font-size: 17px;
