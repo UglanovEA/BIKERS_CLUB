@@ -40,16 +40,16 @@ $(document).ready(function () {
 
   const commentcontrols = $("#CommentsCarousel");
   commentcontrols.owlCarousel({
-    items: 1,
+    items: 2,
     loop: true,
     dots: false,
-    margin: 20,
+    margin: 100,
     smartSpeed: 1000,
     responsive: {
       0: {
         items: 1,
       },
-      1000: {
+      800: {
         items: 2,
       },
     },

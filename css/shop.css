@@ -7,8 +7,8 @@
   height: 100%;
   width: 100%;
   position: static;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 120px 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 100px 0px;
 }
 .shop-desk {
   margin-bottom: 50px;
@@ -38,24 +38,24 @@
 .shop-slider {
   position: relative;
 }
-.owl-carousel.owl-drag .owl-item {
+.shop .owl-carousel.owl-drag .owl-item {
   height: 250px;
   position: relative;
 }
-.owl-theme .owl-nav.disabled + .owl-dots {
+.shop .owl-theme .owl-nav.disabled + .owl-dots {
   margin-top: 50px;
 }
-.owl-theme .owl-dots .owl-dot span {
+.shop .owl-theme .owl-dots .owl-dot span {
   background: #ce0000;
 }
-.owl-theme .owl-dots .owl-dot.active span,
-.owl-theme .owl-dots .owl-dot:hover span {
+.shop .owl-theme .owl-dots .owl-dot.active span,
+.shop .owl-theme .owl-dots .owl-dot:hover span {
   background: #ffffff;
 }
-.item {
+.shop .item {
   height: 230px;
 }
-.owl-carousel .owl-item img {
+.shop .owl-carousel .owl-item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
