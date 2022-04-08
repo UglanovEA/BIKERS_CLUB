@@ -1,1 +1,27 @@
-// Заголовки, общие БЄМ блоки и проче...
+/*------------ Button ------------*/
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: rem(22);
+	text-transform: uppercase;
+	text-align: center;
+	background: $colorRed;
+	padding: rem(14) rem(15);
+	white-space: nowrap;
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			background: $mainColor;
+			color: $colorRed;
+		}
+	}
+}
+/*------------ Arrows-slider ------------*/
+.arrows {
+	display: flex;
+	gap: rem(100);
+	margin-top: rem(40);
+	align-items: center;
+	justify-content: center;
+}

@@ -272,20 +272,6 @@
 	}
 	// .page-servises__link
 	&__link {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 22px;
-		text-transform: uppercase;
-		background: $colorRed;
-		padding: rem(14) rem(15);
-		transition: all 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				background: $mainColor;
-				color: $colorRed;
-			}
-		}
 	}
 }
 /*==================== TESTMOINALS-PAGE ====================*/
@@ -357,10 +343,85 @@
 	}
 	// .page-testmoinals__arrows
 	&__arrows {
-		display: flex;
-		gap: rem(100);
-		margin-top: rem(40);
-		align-items: center;
-		justify-content: center;
+	}
+}
+/*==================== SHOP-PAGE ====================*/
+.page-shop {
+	position: relative;
+	background: url(../img/bg/bg_shop.jpg) center/cover no-repeat;
+	@include adaptiveValue("padding-top", 100, 30);
+	@include adaptiveValue("padding-bottom", 90, 30);
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: hsla(0, 0%, 0%, 0.5);
+	}
+	// .page-shop__container
+	&__container {
+		position: relative;
+		z-index: 2;
+	}
+	// .page-shop__content
+	&__content {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 65, 30);
+		}
+	}
+	// .page-shop__title
+	&__title {
+		@include adaptiveValue("font-size", 40, 30);
+		font-weight: 700;
+		text-transform: uppercase;
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 50, 20);
+		}
+	}
+	// .page-shop__text
+	&__text {
+		@include adaptiveValue("font-size", 20, 18);
+	}
+	// .page-shop__slider
+	&__slider {
+	}
+	// .page-shop__wrapper
+	&__wrapper {
+	}
+	// .page-shop__slide
+	&__slide {
+	}
+	// .page-shop__arrows
+	&__arrows {
+	}
+}
+.slider-shop {
+	position: relative;
+	margin-bottom: rem(30);
+	// .slider-shop__body
+	&__body {
+	}
+	// .slider-shop__img
+	&__img {
+		width: 100%;
+		height: rem(250);
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+		@media (min-width: $pc) {
+			width: rem(270);
+		}
+	}
+	// .slider-shop__link
+	&__link {
+		position: absolute;
+		bottom: rem(-30);
+		left: 50%;
+		transform: translateX(-50%);
 	}
 }
