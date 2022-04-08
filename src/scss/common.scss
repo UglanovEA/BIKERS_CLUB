@@ -9,6 +9,7 @@
 	background: $colorRed;
 	padding: rem(14) rem(15);
 	white-space: nowrap;
+	border: rem(1) solid transparent;
 	transition: all 0.3s ease 0s;
 	@media (any-hover: hover) {
 		&:hover {
@@ -16,7 +17,12 @@
 			color: $colorRed;
 		}
 	}
+	&-border {
+		background: transparent;
+		border: rem(1) solid $mainColor;
+	}
 }
+
 /*------------ Arrows-slider ------------*/
 .arrows {
 	display: flex;
@@ -24,4 +30,10 @@
 	margin-top: rem(40);
 	align-items: center;
 	justify-content: center;
+}
+/*------------ titles/paragraphs ------------*/
+h2 {
+	@include adaptiveValue("font-size", 40, 30);
+	font-weight: 700;
+	text-transform: uppercase;
 }
