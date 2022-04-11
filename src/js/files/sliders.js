@@ -179,10 +179,10 @@ function initSliders() {
       //lazy: true,
 
       // Эффекты
-      // autoplay: {
-      //   delay: 3000,
-      //   disableOnInteraction: false,
-      // },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
       // Кнопки "влево/вправо"
       navigation: {
         prevEl: '.page-shop__arrow-prev',

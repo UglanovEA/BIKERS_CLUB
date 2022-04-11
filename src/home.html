@@ -26,7 +26,7 @@
           </div>
         </div>
         <!--==================== SLIDER-PAGE ====================-->
-        <!-- <div class="slider__page page-slider">
+        <div class="slider__page page-slider">
           <h2 class="page-slider__title">Lorem ipsum dolor sit amet.</h2>
           <div class="page-slider__body">
             <div class="page-slider__content">
@@ -39,13 +39,13 @@
               <a href="#!" class="page-slider__link">LEARN MORE</a>
             </div>
             <div class="page-slider__slider swiper">
-              <div class="page-slider__wrapper swiper-wrapper"> -->
-        <!--==================== SLIDE 1 ====================-->
-        <!-- <div class="page-slider__slide swiper-slide">
+              <div class="page-slider__wrapper swiper-wrapper">
+                <!--==================== SLIDE 1 ====================-->
+                <div class="page-slider__slide swiper-slide">
                   <img src="@img/slider/biker.jpg" alt="biker" />
-                </div> -->
-        <!--==================== SLIDE 2 ====================-->
-        <!-- <div class="page-slider__slide swiper-slide">
+                </div>
+                <!--==================== SLIDE 2 ====================-->
+                <div class="page-slider__slide swiper-slide">
                   <img src="@img/slider/biker.jpg" alt="biker" />
                 </div>
               </div>
@@ -57,7 +57,7 @@
               <i class="fas fa-angle-right"></i>
             </button>
           </div>
-        </div> -->
+        </div>
         <!--==================== OUR-RIDER-PAGE ====================-->
         <section class="page-our-rider">
           <div class="page-our-rider__container">
@@ -85,8 +85,8 @@
           </div>
         </section>
         <!--==================== SERVICES-PAGE ====================-->
-        <section class="page-servises">
-          <div class="page-servises__container">
+        <section class="page-servises bg">
+          <div class="page-servises__container z-i">
             <div class="page-servises__item">
               <h3 class="page-servises__title">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt,
@@ -114,8 +114,8 @@
           </div>
         </section>
         <!--==================== TESTMOINALS-PAGE ====================-->
-        <section class="page-testmoinals">
-          <div class="page-testmoinals__container">
+        <section class="page-testmoinals bg">
+          <div class="page-testmoinals__container z-i">
             <div class="page-testmoinals__slider swiper">
               <div class="page-testmoinals__wrapper swiper-wrapper">
                 <!--==================== SLIDE 1 ====================-->
@@ -215,8 +215,8 @@
           </div>
         </section>
         <!--==================== SHOP-PAGE ====================-->
-        <section class="page-shop">
-          <div class="page-shop__container">
+        <section class="page-shop bg">
+          <div class="page-shop__container z-i">
             <div class="page-shop__content">
               <h2 class="page-shop__title">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima?
@@ -329,7 +329,34 @@
           </div>
         </section>
         <!--==================== SIGN-UP-PAGE ====================-->
+        <section class="page-sing-up bg">
+          <div class="page-sing-up__container z-i">
+            <h2 class="page-sing-up__title">signup for newsletter</h2>
+            <div class="page-sing-up__content">
+              <p class="page-sing-up__text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Aspernatur quas, veritatis dicta velit recusandae voluptatibus?
+              </p>
+              <form action="#!" class="page-sing-up__form">
+                <input
+                  autocomplete="off"
+                  type="text"
+                  name="form[]"
+                  data-validate
+                  data-required="email"
+                  data-error="Ошибка, не верно заполнен email-адрес"
+                  placeholder="Enter Your Email Address"
+                  class="page-sing-up__input"
+                />
+                <button type="submit" class="page-sing-up__btn button">
+                  submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
       </main>
+      <!--==================== FOOTER ====================-->
       @@include('html/_footer.htm',{})
     </div>
     @@include('html/_popup.htm',{}) @@include('html/_js.htm',{})
