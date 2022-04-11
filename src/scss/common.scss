@@ -3,7 +3,7 @@
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	font-size: rem(22);
+	@include adaptiveValue("font-size", 22, 18);
 	text-transform: uppercase;
 	text-align: center;
 	background: $colorRed;
@@ -41,10 +41,18 @@
 /*------------ Arrows-slider ------------*/
 .arrows {
 	display: flex;
-	gap: rem(100);
+	gap: rem(80);
 	margin-top: rem(40);
 	align-items: center;
 	justify-content: center;
+	& button {
+		width: 50px;
+		height: 50px;
+		transition: all 0.3s ease 0s;
+		&:hover {
+			background-color: #ffffff73;
+		}
+	}
 }
 /*------------ titles/paragraphs ------------*/
 h2 {
