@@ -1,27 +1,24 @@
-/*==================== MAIN-PAGE ====================*/
-
 /*==================== PAGE-MAIN ====================*/
 .page-main {
 	background: url(../img/main-background.jpg) center/cover no-repeat;
-	position: relative;
-	&::before {
-		content: "";
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		left: 0;
-		background: hsla(0, 0%, 0%, 0.5);
-		z-index: 2;
+	@media (max-height: rem(570)) {
+		padding-top: rem(15);
+		padding-bottom: rem(15);
 	}
 	// .page-main__container
 	&__container {
 		position: relative;
 		height: calc(100vh - 70px);
+		@media (max-height: rem(700)) {
+			height: calc(100vh - 50px);
+		}
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		z-index: 3;
+		@media (max-height: rem(400)) {
+			height: 100%;
+		}
 	}
 	// .page-main__content
 	&__content {
@@ -33,8 +30,6 @@
 	}
 	// .page-main__subtitle
 	&__subtitle {
-		@include adaptiveValue("font-size", 40, 25);
-		text-transform: uppercase;
 	}
 	// .page-main__title
 	&__title {
@@ -48,18 +43,11 @@
 		line-height: 1.5;
 		font-weight: 300;
 		&:not(:last-child) {
-			@include adaptiveValue("margin-bottom", 50, 30);
+			@include adaptiveValue("margin-bottom", 50, 20);
 		}
 	}
 	// .page-main__btn
 	&__btn {
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-		font-size: rem(20);
-		text-transform: uppercase;
-		background-color: #ce0000;
-		padding: rem(20);
 	}
 	// .page-main__link
 	&__link {
@@ -69,7 +57,9 @@
 .page-slider {
 	position: relative;
 	max-width: rem(1167);
-	margin: rem(-72) auto 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: rem(-72);
 	display: flex;
 	flex-direction: column;
 	background: $colorRed;
@@ -79,6 +69,10 @@
 	@include adaptiveValue("padding-left", 56, 15);
 	@include adaptiveValue("padding-right", 56, 15);
 	z-index: 5;
+	@media (max-height: rem(700)) {
+		margin-top: rem(0);
+		z-index: 2;
+	}
 	// .page-slider__title
 	&__title {
 	}
