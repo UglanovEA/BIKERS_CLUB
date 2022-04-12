@@ -34,7 +34,7 @@ function initSliders() {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation],
+      modules: [Navigation, Autoplay],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
@@ -44,18 +44,16 @@ function initSliders() {
 
       //touchRatio: 0,
       //simulateTouch: false,
-      //loop: true,
+      loop: true,
       //preloadImages: false,
       //lazy: true,
 
-      /*
-			// Эффекты
-			effect: 'fade',
-			autoplay: {
-				delay: 3000,
-				disableOnInteraction: false,
-			},
-			*/
+      // Эффекты
+      // effect: 'fade',
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
 
       // Пагинация
       /*
