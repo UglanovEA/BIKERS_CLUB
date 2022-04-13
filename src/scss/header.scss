@@ -18,6 +18,9 @@
 	}
 	// .header__logo
 	&__logo {
+		&-link {
+			display: flex;
+		}
 		color: $mainColor;
 		@include adaptiveValue("font-size", 30, 18);
 		text-transform: uppercase;
