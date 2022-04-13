@@ -933,38 +933,65 @@ const sr = ScrollReveal({
   origin: 'top',
   distance: '60px',
   duration: 2500,
-  delay: 100,
+  delay: 400,
 });
 
+sr.reveal(`.page-main__subtitle, .page-our-rider__title, .page-shop__title`);
+sr.reveal(`.page-main__title, .page-our-rider__text, .page-shop__text`, {
+  delay: 500,
+});
+sr.reveal(`.page-main__text, .page-blog__title`, { delay: 600 });
+sr.reveal(`.page-main__btn, .page-blog__text`, { delay: 800 });
+sr.reveal(`.page-slider`, { delay: 900, origin: 'bottom' });
+
+sr.reveal(`.page-slider__title, .footer__about`, { origin: 'bottom' });
+sr.reveal(`.page-slider__subtitle, .footer__latest`, {
+  origin: 'bottom',
+  delay: 500,
+});
+sr.reveal(`.page-slider__text, .footer__contact`, {
+  origin: 'bottom',
+  delay: 600,
+});
+sr.reveal(`.page-slider__controls, .footer__copyright`, {
+  origin: 'bottom',
+  delay: 800,
+});
+sr.reveal(`.page-slider__slider`, { origin: 'right', delay: 900 });
+
 sr.reveal(
-  `.page-main__subtitle, .page-our-rider__title, .page-servises__title, .page-shop__title`
-);
-sr.reveal(
-  `.page-main__title, .page-our-rider__text, .page-servises__text, .page-shop__text, .page-blog__title`,
+  `.page-our-rider__image, .page-servises__item, .page-testmoinals__slide, .page-shop__slide`,
   {
-    delay: 200,
+    delay: 600,
+    origin: 'bottom',
+    interval: 150,
+    distance: '260px',
   }
 );
-sr.reveal(`.page-our-rider__image, .page-shop__slider`, {
-  delay: 300,
-  origin: 'bottom',
-  interval: 200,
-  distance: '100px',
+
+sr.reveal(`.header__menu, .header__logo, .page-sing-up__title`, {
+  delay: 600,
+  origin: 'left',
 });
-sr.reveal(`.page-main__text, .page-servises__link, .page-blog__text`, {
-  delay: 300,
+sr.reveal(`.page-sing-up__text`, {
+  delay: 400,
+  origin: 'left',
 });
-sr.reveal(`.page-main__btn, .page-blog__link`, { delay: 500 });
-sr.reveal(`.header__link`, { delay: 600, interval: 100, origin: 'right' });
-sr.reveal(`.page-slider__subtitle`, { delay: 100, origin: 'left' });
-sr.reveal(`.page-slider__text`, { delay: 200, origin: 'left' });
-sr.reveal(`.page-slider__controls`, { delay: 300, origin: 'left' });
-sr.reveal(`.page-slider__slider`, {
-  delay: 100,
+sr.reveal(`.header__link, .page-sing-up__form`, {
+  delay: 500,
   origin: 'right',
+  interval: 100,
 });
-sr.reveal(`.page-blog__content`, { delay: 100, origin: 'left', interval: 100 });
-sr.reveal(`.page-blog__img`, { delay: 100, origin: 'right', interval: 100 });
-sr.reveal(`.header__logo`, { delay: 600, origin: 'left' });
-sr.reveal(`.menu__item`, { delay: 900, interval: 100, origin: 'left' });
-sr.reveal(`.page-slider`, { delay: 900, origin: 'bottom' });
+sr.reveal(`.menu__item`, {
+  delay: 600,
+  interval: 100,
+  origin: 'top',
+});
+
+sr.reveal(`.page-blog__content`, { delay: 400, origin: 'left' });
+sr.reveal(`.page-blog__img`, {
+  delay: 400,
+  opacity: 0,
+  interval: 150,
+  distance: '0px',
+});

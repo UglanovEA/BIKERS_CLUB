@@ -34,7 +34,7 @@ function initSliders() {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation, Autoplay],
+      modules: [Navigation],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
@@ -50,10 +50,10 @@ function initSliders() {
 
       // Эффекты
       // effect: 'fade',
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
 
       // Пагинация
       /*
@@ -110,7 +110,7 @@ function initSliders() {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation, Autoplay],
+      modules: [Navigation],
       observer: true,
       observeParents: true,
       slidesPerView: 2,
@@ -124,10 +124,10 @@ function initSliders() {
       //lazy: true,
 
       // Эффекты
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
       navigation: {
         prevEl: '.page-testmoinals__arrow-prev',
         nextEl: '.page-testmoinals__arrow-next',
@@ -153,7 +153,7 @@ function initSliders() {
       // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation, Autoplay],
+      modules: [Navigation],
       observer: true,
       observeParents: true,
       slidesPerView: 4,
@@ -167,10 +167,10 @@ function initSliders() {
       //lazy: true,
 
       // Эффекты
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
       // Кнопки "влево/вправо"
       navigation: {
         prevEl: '.page-shop__arrow-prev',
