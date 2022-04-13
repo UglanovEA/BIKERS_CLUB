@@ -934,6 +934,7 @@ const sr = ScrollReveal({
   distance: '60px',
   duration: 2500,
   delay: 400,
+  mobile: false,
 });
 
 sr.reveal(`.page-main__subtitle, .page-our-rider__title, .page-shop__title`);
